@@ -395,7 +395,7 @@
   root.MVIP = {
     ALPHABET: ALPHABET,
     PREFIX: PREFIX,
-    DEFAULT_SECRET: '5802df20680e473a41e7de9661d13d52d4de9ff161ff1de150e8227d5771fa4b',
+    DEFAULT_SECRET: '',
     sha256: sha256,
     hmacSha256: hmacSha256,
     hexToBytes: hexToBytes,
@@ -450,8 +450,8 @@
     });
   });
 
-  $('secret').value = M.DEFAULT_SECRET;
-  $('secretShow').textContent = M.DEFAULT_SECRET;
+  $('secret').value = '';
+  $('secretShow').textContent = 'không lưu trên trang — nhập ở ô Secret mỗi lần dùng';
 
   $('btnGen').addEventListener('click', function () {
     var days = Math.max(1, Math.min(3650, parseInt($('days').value, 10) || 30));
